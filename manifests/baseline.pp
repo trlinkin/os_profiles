@@ -12,7 +12,7 @@ class os_profile::baseline (
 
   class {'::os_profile::baseline::rootpw':
     root_pw => $root_pw,
-    stage   => 'setup_infra',
+    stage   => 'setup',
   }
 
   require os_profile::baseline::motd
