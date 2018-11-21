@@ -3,11 +3,11 @@ class os_profile::baseline::firewall (
 ) {
 
   Firewall {
-    before  => Class['profile::platform::baseline::linux::firewall_post'],
-    require => Class['profile::platform::baseline::linux::firewall_pre'],
+    before  => Class['::os_profile::baseline::firewall_post'],
+    require => Class['::os_profile::baseline::firewall_pre'],
   }
 
-  class { ['::profile::platform::baseline::linux::firewall_pre', '::profile::platform::baseline::linux::firewall_post']: }
+  class { ['::os_profile::baseline::firewall_pre', '::os_profile::baseline::firewall_post']: }
 
   resources { 'firewall':
     purge => $purge,
