@@ -1,4 +1,4 @@
-class profile::platform::baseline (
+class os_profile::baseline (
   Array   $timeservers = ['0.pool.ntp.org','1.pool.ntp.org'],
   String  $root_pw     =  '$1$NsVcFaNv$JtdCe90uSW1YE6mhTWwoH0', #puppetlabs4ever
 ){
