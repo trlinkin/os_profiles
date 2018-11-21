@@ -16,9 +16,8 @@ class os_profile::baseline (
   require os_profile::baseline::ssh
   require os_profile::baseline::vim
   require os_profile::baseline::packages
+  require os_profile::baseline::firewall
   require os_profile::baseline::firewall_pre
   require os_profile::baseline::firewall_post
-  require os_profile::baseline::firewall
-
 
 }
