@@ -5,14 +5,14 @@ class os_profile::baseline (
 
   include stdlib::stages
 
-  user { 'root':
-    password => $root_pw,
-    stage    => 'setup_infra',
-  }
-
   # Global
   class {'ntp':
     servers => $timeservers,
+  }
+
+  class {'::os_profile::baseline::rootpw':
+    root_pw => $root_pw,
+    stage   => 'setup_infra',
   }
 
   require os_profile::baseline::motd
