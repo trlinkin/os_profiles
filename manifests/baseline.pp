@@ -3,8 +3,11 @@ class os_profile::baseline (
   String  $root_pw     =  '$1$NsVcFaNv$JtdCe90uSW1YE6mhTWwoH0', #puppetlabs4ever
 ){
 
+  include stdlib::stages
+
   user { 'root':
     password => $root_pw,
+    stage    => 'setup_infra',
   }
 
   # Global
