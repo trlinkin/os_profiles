@@ -1,5 +1,5 @@
 class os_profile::baseline::rootpw(
-  $string $root_pw,
+  String $root_pw,
 ){
 
   user { 'root':
